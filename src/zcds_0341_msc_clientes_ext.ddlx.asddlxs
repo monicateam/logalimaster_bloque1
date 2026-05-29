@@ -1,0 +1,51 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+    typeName: 'Cliente',
+    typeNamePlural: 'Cliente',
+    title: {
+        type: #STANDARD
+    },
+    description: {
+        type: #STANDARD
+    }
+}
+annotate view ZCDS_0341_MSC_CLIENTES
+    with 
+{
+@EndUserText.label: 'IdLibro'
+    @UI.facet: [ {
+    label: 'Información Cliente', 
+    id: 'GeneralInfo', 
+    type: #COLLECTION,
+    position: 10
+  }, { id: 'Cliente', parentId: 'GeneralInfo', label: 'Cliente', type: #FIELDGROUP_REFERENCE, targetQualifier: 'GeneralInfo' }]
+  
+    @UI.fieldGroup: [ { qualifier: 'GeneralInfo', position: 10 } ]
+    IdCliente;
+    @UI.identification: [ {
+    position: 20 
+  } ]
+    @UI.lineItem: [ {
+    position: 20 
+  } ]
+    TipoAcceso;
+    @UI.lineItem: [ {
+    position: 30 
+  } ]
+    Nombre;
+    @UI.lineItem: [ {
+    position: 40 
+  } ]
+    Apellidos;
+    @UI.lineItem: [ {
+    position: 50 
+  } ]
+    Email;
+    @UI.lineItem: [ {
+    position: 60 
+  } ]
+    Url;
+    
+    
+    
+}

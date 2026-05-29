@@ -1,0 +1,165 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+    typeName: 'Libro',
+    typeNamePlural: 'Libros',
+    title: {
+        type: #STANDARD,
+        value: 'IdLibro'
+    },
+    description: {
+        type: #STANDARD,
+        value: 'Titulo'
+    }
+}
+annotate view ZZC_CDS_0341_ROOT_MSC with
+{
+  @EndUserText.label: 'IdLibro'
+  @UI.facet: [ {
+    label: 'Información libro', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  },
+  {  id: 'Booking',
+      purpose: #STANDARD,
+      type: #LINEITEM_REFERENCE,
+      label: 'Bookings',
+      position: 20,
+      targetElement: '_ClientesLibros' }
+  
+  ]
+  @UI.identification: [ {
+    position: 10 
+  } ]
+  @UI.lineItem: [ {
+    position: 10 
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  IdLibro;
+
+    @Consumption.valueHelpDefinition: [{ entity.name: 'ZCDS_0341_MSC_ACC_CATEG' ,
+                                       entity.element: 'BiCateg' }]
+  @UI.identification: [ {
+    position: 20 ,
+    label: 'BiCateg'
+    }
+    ]
+  @UI.lineItem: [ {
+  position: 20 ,
+  label: 'BiCateg'
+  }
+  ]
+  @UI.selectionField: [ {
+  position: 20
+  } ]
+  BiCateg;
+
+  @EndUserText.label: 'Titulo'
+  @UI.identification: [ {
+    position: 30 ,
+    label: 'Titulo'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 ,
+    label: 'Titulo'
+  } ]
+  @UI.selectionField: [ {
+position: 30
+} ]
+  Titulo;
+
+  @EndUserText.label: 'Autor'
+  @UI.identification: [ {
+    position: 40 ,
+    label: 'Autor'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 ,
+    label: 'Autor'
+  } ]
+  Autor;
+
+  @EndUserText.label: 'Editorial'
+  @UI.identification: [ {
+    position: 50 ,
+    label: 'Editorial'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 ,
+    label: 'Editorial'
+  } ]
+  Editorial;
+
+  @EndUserText.label: 'Idioma'
+  @UI.identification: [ {
+    position: 60 ,
+    label: 'Idioma'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 ,
+    label: 'Idioma'
+  } ]
+  Idioma;
+
+  @EndUserText.label: 'Paginas'
+  @UI.identification: [ {
+    position: 70 ,
+    label: 'Paginas'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 ,
+    label: 'Paginas'
+  } ]
+  Paginas;
+
+  @EndUserText.label: 'Precio'
+  @UI.identification: [ {
+    position: 80 ,
+    label: 'Precio'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 ,
+    label: 'Precio',
+    importance: #HIGH,
+    criticality: 'indiceVentas'
+  } ]
+
+  Precio;
+
+  @EndUserText.label: 'Moneda'
+  @UI.identification: [ {
+    position: 90 ,
+    label: 'Moneda'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 ,
+    label: 'Moneda'
+  } ]
+  Moneda;
+
+  @EndUserText.label: 'Formato'
+  @UI.identification: [ {
+    position: 100 ,
+    label: 'Formato'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 ,
+    label: 'Formato'
+  } ]
+  Formato;
+
+  @EndUserText.label: 'Url'
+  @UI.identification: [ {
+    position: 110 ,
+    label: 'Url'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 ,
+    label: 'Url'
+  } ]
+  Url;
+
+}

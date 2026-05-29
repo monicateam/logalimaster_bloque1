@@ -1,0 +1,4 @@
+@EndUserText.label: 'Servicio 0341 MSC'
+define service Z_SRV_0341_MSC_LIBROS {
+  expose Z_0341_MSC_LIBROS;
+}

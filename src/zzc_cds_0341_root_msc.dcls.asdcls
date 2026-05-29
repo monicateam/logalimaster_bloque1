@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZZC_CDS_0341_ROOT_MSC'
+@MappingRole: true
+define role ZZC_CDS_0341_ROOT_MSC {
+  grant select on ZZC_CDS_0341_ROOT_MSC
+  where INHERITING CONDITIONS FROM ENTITY ZCDS_0341_ROOT_MSC REPLACING { ROOT WITH _BaseEntity };
+}

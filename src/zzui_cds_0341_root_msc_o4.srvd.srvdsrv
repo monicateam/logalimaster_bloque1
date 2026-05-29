@@ -1,0 +1,14 @@
+@EndUserText: {
+  label: 'Service Definition for ZZC_CDS_0341_ROOT_MSC'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZZC_CDS_0341_ROOT_MSC'
+  }
+}
+define service ZZUI_CDS_0341_ROOT_MSC_O4
+  provider contracts odata_v4_ui {
+  expose ZZC_CDS_0341_ROOT_MSC;
+  expose ZCDS_0341_MSC_CLIENTES;
+  expose ZCDS_0341_MSC_CLIENT_LIBROS;
+}

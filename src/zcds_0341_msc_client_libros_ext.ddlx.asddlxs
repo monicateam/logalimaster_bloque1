@@ -1,0 +1,64 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+    typeName: 'Cliente',
+    typeNamePlural: 'Cliente',
+    title: {
+        type: #STANDARD,
+        value: 'IdCliente'
+    }
+}
+annotate view ZCDS_0341_MSC_CLIENT_LIBROS
+    with 
+{
+
+    @UI.facet: [
+  {
+    id: 'DetalleCliente',
+    purpose: #STANDARD,
+    type: #COLLECTION,
+    label: 'Detalle cliente',
+    targetElement: '_clientes' // Navigates to Level 1
+  }, { 
+  id: 'Cliente', parentId: 'DetalleCliente', label: 'Detalle', type: #FIELDGROUP_REFERENCE, targetQualifier: 'DetalleCliente'
+  }
+]
+
+     @UI.lineItem: [ {
+    position: 10 ,
+    label: 'Id cliente',
+    type: #WITH_NAVIGATION_PATH,
+    targetElement: '_clientes'
+    } ]
+    @UI.fieldGroup: [ { qualifier: 'DetalleCliente' , position: 10, label: 'Id' } ]
+    IdCliente;
+    
+    @UI.lineItem: [ {
+        position: 20 ,
+        label: 'Tipo acceso'
+      } ]
+      @UI.fieldGroup: [ { qualifier: 'DetalleCliente', position: 20, label: 'Tipo Acceso' } ]
+TipoAcceso;
+    
+    @UI.lineItem: [ {
+    position: 30 ,
+    label: 'Nombre'
+  } ]
+    @UI.fieldGroup: [ { qualifier: 'DetalleCliente', position: 30, label: 'Nombre' } ]
+    Nombre;
+     @UI.lineItem: [ {
+    position: 40 ,
+    label: 'Apellidos'
+  } ]   
+    @UI.fieldGroup: [ { qualifier: 'DetalleCliente', position: 40, label: 'Apellidos' } ]
+    Apellidos;
+    @UI.lineItem: [ {
+    position: 50 ,
+    label: 'Email'
+  } ] 
+    @UI.fieldGroup: [ { qualifier: 'DetalleCliente', position: 50, label: 'Email' } ]
+    Email;
+
+    @UI.fieldGroup: [ { qualifier: 'DetalleCliente', position: 60, label: 'Url' } ]
+    Url;
+    
+}
